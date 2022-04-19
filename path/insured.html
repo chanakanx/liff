@@ -18,6 +18,15 @@
 
   <script src="https://static.line-scdn.net/liff/edge/2.5.0/sdk.js"></script>
   <script>
+    async function getUserProfile() {
+      const profile = await liff.getProfile()
+      document.getElementById("pictureUrl").src = profile.pictureUrl
+      document.getElementById("userId").append(profile.userId)
+      document.getElementById("statusMessage").append(profile.statusMessage)
+      document.getElementById("displayName").append(profile.displayName)
+      document.getElementById("decodedIDToken").append(liff.getDecodedIDToken().email)
+    }
+
     async function shareMsg() {
       await liff.shareTargetPicker([
         {
@@ -31,7 +40,7 @@
     async function main() {
       await liff.init({ liffId: "1655759438-9AMOAD3y" })
       if (liff.isLoggedIn()) {
-        shareMsg()
+        getUserProfile()
       } else {
         liff.login({ redirectUri: "https://chanakanx.github.io/liff/path/" })
       }
