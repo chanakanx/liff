@@ -1,0 +1,124 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ตลอดชีพ 90/1</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+  
+  <script>
+    // Query Params
+    const queryString = decodeURIComponent(window.location.search);
+    const params = new URLSearchParams(queryString);
+    document.getElementById("param").append(params.get("param"));
+  </script>
+
+  <script src="https://static.line-scdn.net/liff/edge/versions/2.5.0/sdk.js"></script>
+  <script>
+    async function main() {
+      await liff.init({ liffId: "1655759438-9AMOAD3y" })
+      await liff.shareTargetPicker([
+      {
+      "type": "text",
+      "text": "•รับเงินคืน 2.5% ของจำนวนเงินเอาประกันภัยทุกปี จนถึงอายุ 89 ปี\n•ครบกำหนดสัญญา รับเงินคืน 100% ของจำนวนเงินเอาประกันภัย\n•ความคุ้มครองชีวิต 100% ของจำนวนเงินเอาประกันภัย\n•ผู้เอาประกันภัยสามารถนำเบี้ยประกันภัยไปหักลดหย่อนภาษีได้ตามหลักเกณฑ์ที่กรมสรรพากรกำหนดสูงสุดถึง100,000 บาท"
+  },
+  {
+      "type": "flex",
+      "altText": "ตลอดชีพ 90/1",
+      "contents": {
+        "type": "bubble",
+        "size": "mega",
+        "hero": {
+          "type": "video",
+          "url": "https://dl.dropboxusercontent.com/s/xu5bqyhw8maazdz/insured90%3A1.mp4?dl=0",
+          "previewUrl": "https://dl.dropboxusercontent.com/s/ubv0fgkfm5hwh8f/90%3A1intro.jpg?dl=0",
+          "altContent": {
+            "type": "image",
+            "size": "full",
+            "aspectRatio": "1040:586",
+            "aspectMode": "cover",
+            "url": "https://dl.dropboxusercontent.com/s/ubv0fgkfm5hwh8f/90%3A1intro.jpg?dl=0"
+          },
+          "aspectRatio": "1040:586"
+        }
+      }
+    },
+    {
+      "type": "flex",
+      "altText": "ตลอดชีพ 90/1",
+      "contents": {
+        "type": "bubble",
+        "size": "mega",
+        "hero": {
+          "aspectRatio": "900:640",
+          "type": "image",
+          "size": "full",
+          "aspectMode": "cover",
+          "url": "https://dl.dropboxusercontent.com/s/ienl9g04gkooc4k/901v2.jpg?dl=0"
+        },
+        "body": {
+          "contents": [
+            {
+              "size": "md",
+              "wrap": true,
+              "weight": "bold",
+              "type": "text",
+              "text": "ตลอดชีพ 90/1"
+            },
+            {
+              "layout": "vertical",
+              "type": "box",
+              "contents": [
+                {
+                  "contents": [
+                    {
+                      "text": "ชำระเบี้ยประกันภัยครั้งเดียว ให้ความคุ้มครองถึงอายุ 90 ปี คุ้มตลอดชีพ !",
+                      "type": "text",
+                      "wrap": true,
+                      "color": "#8c8c8c",
+                      "size": "xs"
+                    }
+                  ],
+                  "layout": "baseline",
+                  "type": "box",
+                  "spacing": "sm"
+                }
+              ]
+            }
+          ],
+          "paddingAll": "13px",
+          "type": "box",
+          "spacing": "sm",
+          "layout": "vertical"
+        },
+        "footer": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "margin": "sm",
+              "height": "sm",
+              "action": {
+                "type": "uri",
+                "label": "ดูรายละเอียด",
+                "uri": "https://lin.ee/4Ca3A4Z"
+              },
+              "style": "primary",
+              "color": "#1343A2",
+              "type": "button"
+            }
+          ]
+        }
+      }
+    }
+      ])
+      liff.closeWindow()
+    }
+    main()
+  </script>
+</body>
+
+</html>
