@@ -21,6 +21,7 @@
 
     async function main() {
       await liff.init({ liffId: "1655759438-9AMOAD3y" })
+      await liff.login({ redirectUri: "https://chanakanx.github.io/liff/path/" })
       await liff.shareTargetPicker([
         {
           "type": "text",
