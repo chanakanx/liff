@@ -22,9 +22,45 @@
       await liff.init({ liffId: "1655759438-9AMOAD3y" })
       await liff.shareTargetPicker([
       {
-          "type": "text",
-          "text": "This Message"
+      type: "flex",
+      altText: "Flex Message",
+      contents: {
+        "type": "bubble",
+        "size": "giga",
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "image",
+              "url": "https://dl.dropboxusercontent.com/s/f78h712kiu384o8/dlnamfon.jpg?dl=0",
+              "size": "full",
+              "aspectMode": "fit",
+              "aspectRatio": "1705:960"
+            }
+          ],
+          "paddingAll": "0px"
+        },
+        "footer": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "button",
+              "action": {
+                "type": "uri",
+                "label": "ไปดูสินค้าและบริการของเรา คลิก!!",
+                "uri": "https://lin.ee/4Ca3A4Z"
+              },
+              "style": "primary",
+              "color": "#1343A2"
+            }
+          ],
+          "spacing": "xxl",
+          "margin": "none"
         }
+      }
+    }
       ])
       liff.closeWindow()
     }
