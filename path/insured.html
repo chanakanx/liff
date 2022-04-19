@@ -8,20 +8,6 @@
 </head>
 
 <body>
-  <h1>Hello World!</h1>
-  <p id="param"><b>Query Param: </b></p>
-  <img id="pictureUrl">
-  <p id="userId"><b>userId:</b> </p>
-  <p id="displayName"><b>displayName:</b> </p>
-  <p id="statusMessage"><b>statusMessage:</b> </p>
-  <p id="decodedIDToken"><b>email:</b> </p>
-  
-  
-  <section id="button">
-  <button id="btnShare">Share Target Picker</button>
-  </section>
-  
-
 
   <script>
     // Query Params
@@ -30,11 +16,11 @@
     document.getElementById("param").append(params.get("param"));
   </script>
 
-  <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+  <script src="https://static.line-scdn.net/liff/edge/2.5.0/sdk.js"></script>
   <script>
 
-    async function shareMsg() {
-      const btnShare = document.getElementById("btnShare")
+    async function main() {
+      await liff.init({ liffId: "1655759438-9AMOAD3y" })
       await liff.shareTargetPicker([
         {
           "type": "text",
@@ -42,23 +28,6 @@
         }
       ])
       liff.closeWindow()
-    }
-
-    async function getUserProfile() {
-      const profile = await liff.getProfile()
-      document.getElementById("pictureUrl").src = profile.pictureUrl
-      document.getElementById("userId").append(profile.userId)
-      document.getElementById("statusMessage").append(profile.statusMessage)
-      document.getElementById("displayName").append(profile.displayName)
-      document.getElementById("decodedIDToken").append(liff.getDecodedIDToken().email)
-    }
-    async function main() {
-      await liff.init({ liffId: "1655759438-9AMOAD3y" })
-      if (liff.isLoggedIn()) {
-        getUserProfile()
-      } else {
-        liff.login({ redirectUri: "https://chanakanx.github.io/liff/path/" })
-      }
     }
     main()
   </script>
