@@ -16,12 +16,9 @@
     document.getElementById("param").append(params.get("param"));
   </script>
 
-  <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+  <script src="https://static.line-scdn.net/liff/edge/2.5.0/sdk.js"></script>
   <script>
-
-    async function main() {
-      await liff.init({ liffId: "1655759438-9AMOAD3y" })
-      await liff.login({ redirectUri: "https://chanakanx.github.io/liff/path/" })
+    async function shareMsg() {
       await liff.shareTargetPicker([
         {
           "type": "text",
@@ -29,50 +26,16 @@
         }
       ])
       liff.closeWindow()
-      // Try a LIFF function
-  switch (liff.getOS()) {
-    case "android": body.style.backgroundColor = "#d1f5d3"; break
-    case "ios": body.style.backgroundColor = "#eeeeee"; break
+    }
+
+    async function main() {
+      await liff.init({ liffId: "1655759438-9AMOAD3y" })
+      if (liff.isLoggedIn()) {
+        shareMsg()
+      } else {
+        liff.login({ redirectUri: "https://chanakanx.github.io/liff/path/" })
+      }
   }
-
-    // ...
-    if (!liff.isInClient()) {
-      btnLogIn.style.display = "block"
-      btnLogOut.style.display = "block"
-    }
-
-    btnLogIn.onclick = () => {
-      liff.login()
-    }
-    
-    btnLogOut.onclick = () => {
-      liff.logout()
-      window.location.reload()
-    }
-
-    // status login
-  if (!liff.isInClient()) {
-    if (liff.isLoggedIn()) {
-      btnLogIn.style.display = "none"
-      btnLogOut.style.display = "block"
-    } else {
-      btnLogIn.style.display = "block"
-      btnLogOut.style.display = "none"
-    }
-  }
-
-  if (!liff.isInClient()) {
-    if (liff.isLoggedIn()) {
-      btnShare.style.display = "block"
-      // ...
-    } else {
-      // ...
-    }
-  } else {
-    btnShare.style.display = "block"
-    // ...
-  }
-    }
     main()
   </script>
 </body>
