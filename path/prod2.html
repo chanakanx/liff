@@ -1,0 +1,124 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ซัมซุงบำนาญ65 A90/5</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+  
+  <script>
+    // Query Params
+    const queryString = decodeURIComponent(window.location.search);
+    const params = new URLSearchParams(queryString);
+    document.getElementById("param").append(params.get("param"));
+  </script>
+
+  <script src="https://static.line-scdn.net/liff/edge/versions/2.5.0/sdk.js"></script>
+  <script>
+    async function main() {
+      await liff.init({ liffId: "1655759438-9AMOAD3y" })
+      await liff.shareTargetPicker([
+      {
+      "type": "text",
+      "text": "•ชำระเบี้ยสั้นเพียง 5 ปี\n•รับความคุ้มครองชีวิตเพิ่มขึ้น 10% ทุกปี ของจำนวนเงินเอาประกันภัยตลอด 10 ปีก่อนปีที่รับบำนาญสูงสุด 200% ของจำนวนเงินเอาประกันภัย\n•รับเงินบำนาญ 12% ของจำนวนเงินเอาประกันภัย ณ ปีกรมธรรม์ที่ผู้เอาประกันภัยอายุครบ 65 ปี จนถึงอายุ 90 ปี\n•การันตีเงินบำนาญ 15 ปี\n•ได้รับเงินสิทธิลดหย่อนภาษีเงินได้บุคคลธรรมดาสูงสุด 300,000 บาท"
+  },
+  {
+      "type": "flex",
+      "altText": "ซัมซุงบำนาญ65 A90/5",
+      "contents": {
+        "type": "bubble",
+        "size": "mega",
+        "hero": {
+          "type": "video",
+          "url": "https://dl.dropboxusercontent.com/s/sbno9nugj6y7o5i/insured90%3A5.mp4?dl=0",
+          "previewUrl": "https://dl.dropboxusercontent.com/s/gu0giub1yb5ug2z/90%3A5intro.jpg?dl=0",
+          "altContent": {
+            "type": "image",
+            "size": "full",
+            "aspectRatio": "1040:586",
+            "aspectMode": "cover",
+            "url": "https://dl.dropboxusercontent.com/s/gu0giub1yb5ug2z/90%3A5intro.jpg?dl=0"
+          },
+          "aspectRatio": "1040:586"
+        }
+      }
+    },
+    {
+      "type": "flex",
+      "altText": "ซัมซุงบำนาญ65 A90/5",
+      "contents": {
+        "type": "bubble",
+        "size": "mega",
+        "hero": {
+          "aspectRatio": "900:640",
+          "type": "image",
+          "size": "full",
+          "aspectMode": "cover",
+          "url": "https://dl.dropboxusercontent.com/s/ytyz3rmtm6pq97v/905v2.jpg?dl=0"
+        },
+        "body": {
+          "contents": [
+            {
+              "size": "md",
+              "wrap": true,
+              "weight": "bold",
+              "type": "text",
+              "text": "ซัมซุงบำนาญ65 A90/5"
+            },
+            {
+              "layout": "vertical",
+              "type": "box",
+              "contents": [
+                {
+                  "contents": [
+                    {
+                      "text": "ให้คุณสนุก มีเงินใช้หลังเกษียณ ชำระเบี้ยสั้นเพียง 5 ปี",
+                      "type": "text",
+                      "wrap": true,
+                      "color": "#8c8c8c",
+                      "size": "xs"
+                    }
+                  ],
+                  "layout": "baseline",
+                  "type": "box",
+                  "spacing": "sm"
+                }
+              ]
+            }
+          ],
+          "paddingAll": "13px",
+          "type": "box",
+          "spacing": "sm",
+          "layout": "vertical"
+        },
+        "footer": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "margin": "sm",
+              "height": "sm",
+              "action": {
+                "type": "uri",
+                "label": "ดูรายละเอียด",
+                "uri": "https://lin.ee/4Ca3A4Z"
+              },
+              "style": "primary",
+              "color": "#1343A2",
+              "type": "button"
+            }
+          ]
+        }
+      }
+    }
+      ])
+      liff.closeWindow()
+    }
+    main()
+  </script>
+</body>
+
+</html>
