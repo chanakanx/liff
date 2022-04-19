@@ -29,6 +29,18 @@
       ])
       liff.closeWindow()
     }
+    
+    if (!liff.isInClient()) {
+    if (liff.isLoggedIn()) {
+      btnShare.style.display = "block"
+      // ...
+    } else {
+      // ...
+    }
+  } else {
+    btnShare.style.display = "block"
+    // ...
+  }
     main()
   </script>
 </body>
