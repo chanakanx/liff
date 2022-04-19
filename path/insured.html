@@ -28,9 +28,39 @@
         }
       ])
       liff.closeWindow()
+      // Try a LIFF function
+  switch (liff.getOS()) {
+    case "android": body.style.backgroundColor = "#d1f5d3"; break
+    case "ios": body.style.backgroundColor = "#eeeeee"; break
+  }
+
+    // ...
+    if (!liff.isInClient()) {
+      btnLogIn.style.display = "block"
+      btnLogOut.style.display = "block"
+    }
+
+    btnLogIn.onclick = () => {
+      liff.login()
     }
     
-    if (!liff.isInClient()) {
+    btnLogOut.onclick = () => {
+      liff.logout()
+      window.location.reload()
+    }
+
+    // status login
+  if (!liff.isInClient()) {
+    if (liff.isLoggedIn()) {
+      btnLogIn.style.display = "none"
+      btnLogOut.style.display = "block"
+    } else {
+      btnLogIn.style.display = "block"
+      btnLogOut.style.display = "none"
+    }
+  }
+
+  if (!liff.isInClient()) {
     if (liff.isLoggedIn()) {
       btnShare.style.display = "block"
       // ...
@@ -41,6 +71,7 @@
     btnShare.style.display = "block"
     // ...
   }
+    }
     main()
   </script>
 </body>
