@@ -31,10 +31,10 @@ window.onload = function() {
 
 }
 
-function initializeLiff(1655759438-9AMOAD3y) {
+function initializeLiff(myLiffId) {
     liff
         .init({
-            liffId: 1655759438-9AMOAD3y
+            liffId: myLiffId
         });
 }
 
@@ -54,7 +54,7 @@ var tel = document.getElementById("tel").value;
         var xos = liff.getOS();
   x.innerHTML = " กำลังลงทะเบียน... ";
 var xmlhttp = new XMLHttpRequest();
-        var theUrl = "https://script.google.com/macros/library/d/1a7j_6TA6EBo5OozN7LVjbC2_JmojGP8sKh34SUsojmnLITZiqtJ1WvdM/1?fn="+fn+"&ln="+ln+"&nn="+nn+"&tel="+tel+"&uid="+uid+"&dis="+dis+"&pic="+pic;
+        var theUrl = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX?fn="+fn+"&ln="+ln+"&nn="+nn+"&tel="+tel+"&uid="+uid+"&dis="+dis+"&pic="+pic;
         xmlhttp.open('GET', theUrl);
         xmlhttp.send();
             xmlhttp.onreadystatechange = function() {
